@@ -35,6 +35,13 @@ Example Playbook
         - role: openstack-neutron_plugin_ml2
           tunnel_id_ranges: 1000:2000
 
+---
+
+A complete Ansible playbook demo, which uses this role, is available here: <https://github.com/dguerri/vagrant-ansible-openstack>
+
+---
+
+
 License
 -------
 
