@@ -37,3 +37,4 @@
       value:    "{{ tunnel_id_ranges }}"
   notify:
     - Restart neutron server
+    - Restart neutron plugin openvswitch agent

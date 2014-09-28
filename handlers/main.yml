@@ -19,4 +19,8 @@
 
 - name: Restart neutron server
   service: name=neutron-server state=restarted
-  ignore_errors: yes # Neutron server could not be installed yet
+  ignore_errors: yes # Could not be installed yet
+
+- name: Restart neutron plugin openvswitch agent
+  service: name=neutron-plugin-openvswitch-agent state=restarted
+  ignore_errors: yes # Could not be installed yet
