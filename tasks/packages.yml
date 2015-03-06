@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-- name: Install neutron ml2 plugin
+- name: Install Neutron ML2 plugin
   apt: name="{{ item }}" state=present
   with_items:
     - neutron-plugin-ml2

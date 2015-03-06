@@ -17,10 +17,10 @@
 # limitations under the License.
 #
 
-- name: Restart neutron server
+- name: Restart Neutron server
   service: name=neutron-server state=restarted
-  ignore_errors: yes # Could not be installed yet
+  ignore_errors: yes # Could not be installed
 
-- name: Restart neutron plugin openvswitch agent
+- name: Restart Neutron plugin OpenvSwitch agent
   service: name=neutron-plugin-openvswitch-agent state=restarted
-  ignore_errors: yes # Could not be installed yet
+  ignore_errors: yes # Could not be installed

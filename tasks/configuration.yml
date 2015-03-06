@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-- name: Configure modular layer 2 plug-in
+- name: Configure Neutron Modular Layer 2 plug-in
   ini_file: dest=/etc/neutron/plugins/ml2/ml2_conf.ini
             section="{{ item.section }}"
             option="{{ item.option }}"
@@ -36,5 +36,5 @@
       option:   tunnel_id_ranges
       value:    "{{ tunnel_id_ranges }}"
   notify:
-    - Restart neutron server
-    - Restart neutron plugin openvswitch agent
+    - Restart Neutron server
+    - Restart Neutron plugin OpenvSwitch agent
