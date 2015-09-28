@@ -38,3 +38,10 @@
   notify:
     - Restart Neutron server
     - Restart Neutron plugin OpenvSwitch agent
+
+- name: Set ML2 symlink
+  file: src=/etc/neutron/plugins/ml2/ml2_conf.ini
+        dest=/etc/neutron/plugin.ini
+        owner=root
+        group=root
+        state=link
