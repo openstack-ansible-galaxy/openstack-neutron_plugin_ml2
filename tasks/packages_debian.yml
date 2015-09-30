@@ -17,10 +17,7 @@
 # limitations under the License.
 #
 
-- name: Restart Neutron server
-  service: name=neutron-server state=restarted
-  ignore_errors: yes # Could not be installed
-
-- name: Restart Neutron plugin OpenvSwitch agent
-  service: name={{ neutron_plugin_agent }} state=restarted
-  ignore_errors: yes # Could not be installed
+- name: Install Neutron ML2 plugin
+  apt: name="{{ item }}" state=present
+  with_items:
+    - neutron-plugin-ml2
